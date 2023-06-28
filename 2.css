@@ -1,0 +1,309 @@
+body {
+    background-color: #212121;
+  }
+  #top_bar {
+    display: flex;
+    background-color: #202020;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    white-space: nowrap;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+  #main {
+    width: 100%;
+    height: 800px;
+    margin-top: 70px;
+    display: flex;
+    background-color: #181818;
+  }
+  #menus {
+    background-color: #212121;
+    width: 240px;
+    height: 100%;
+    padding-top: 5px;
+    overflow-y: scroll;
+    flex-shrink: 0;
+  }
+  .menu {
+    display: flex;
+    height: 30px;
+    width: 200px;
+    background-color: #212121;
+    vertical-align: middle;
+    padding: 5px;
+  }
+  .menu:hover {
+    background-color: #383838;
+  }
+  .menu:active {
+    background-color: #606060;
+  }
+  .menu_icon {
+    display: inline-block;
+    width: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .menu_font {
+    color: white;
+    font-size: 14px;
+    padding-left: 10px;
+    white-space: nowrap;
+  }
+  .channel_font {
+    color: white;
+    font-size: 14px;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .menu_profile {
+    width: 23px;
+    height: 23px;
+    border-radius: 70%;
+  }
+  .menu_title {
+    color: grey;
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+  #youtube {
+    width: 120px;
+  }
+  
+  #top_01 {
+    width: 210px;
+    flex-shrink: 0;
+  }
+  #top_02 {
+    background-color: #202020;
+    width: 75%;
+    margin-top: -10px;
+    padding-left: 5%;
+  }
+  #top_03 {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  
+  #searchBox {
+    width: 60%;
+    height: 28px;
+    flex-grow: 1;
+    background-color: black;
+    color: grey;
+    border: none;
+  }
+  #button {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    top: 9px;
+    left: -5px;
+  }
+  #mic {
+    position: relative;
+    width: 25px;
+    top: 7px;
+    margin-right: 8px;
+  }
+  #menuIcon {
+    width: 25px;
+    margin-right: 10px;
+  }
+  .icons {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    width: 25px;
+    height: auto;
+  }
+  #profile {
+    width: 35px;
+  }
+  .border {
+    width: 220px;
+    height: 10px;
+    margin-top: 10px;
+    border-top: 0.2px solid grey;
+    background-color: #212121;
+  }
+  .contents {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    background-color: #181818;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-top: 0.2px solid grey;
+    margin-right: -8px;
+  }
+  .content {
+    /* width:280px; */
+    flex-basis: 22%;
+    height: fit-content;
+    background-color: #181818;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .thumbnail {
+    display: block;
+    /* max-width:100%; */
+    width: 100%;
+    height: auto;
+    background-color: #181818;
+  }
+  .contentDetail {
+    display: flex;
+    background-color: #181818;
+    padding-top: 10px;
+  }
+  
+  .contentProfile2 {
+    padding-left: 10px;
+    background-color: #181818;
+    width: 100%;
+  }
+  .smallProfile {
+    display: block;
+    width: 40px;
+    height: fit-content;
+    border-radius: 70%;
+    overflow: hidden;
+  }
+  .title {
+    width: 100%;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: white;
+  }
+  .userID {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #aaaaaa;
+    white-space: nowrap;
+  }
+  .videoDetail {
+    margin-top: -3px;
+    color: #aaaaaa;
+    white-space: nowrap;
+  }
+  .menu_font2 {
+    display: inline-block;
+    font-size: 5px;
+    color: gray;
+    margin: 5px;
+  }
+  .menu_bottom {
+    padding-left: 12px;
+  }
+  
+  .menu_bottom2 {
+    color: grey;
+    font-size: 6px;
+    padding-left: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: #181818;
+  }
+  #menus::-webkit-scrollbar {
+    width: 10px;
+  }
+  #menus::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+  }
+  #menus::-webkit-scrollbar-track {
+    background-color: #181818;
+  }
+  
+  @media (max-width: 1500px) {
+    #menus {
+      width: fit-content;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      position: fixed;
+    }
+    .menu {
+      display: block;
+      width: 50px;
+      height: 55px;
+    }
+    .menu_font {
+      display: block;
+      white-space: nowrap;
+      width: 40px;
+      font-size: 6px;
+      text-align: center;
+      margin-left: -7px;
+    }
+    .menu2 {
+      display: none;
+    }
+    .border {
+      display: none;
+      border: none;
+    }
+    .menu_ytm {
+      margin-left: -14px;
+    }
+    .contents {
+      margin-left: 60px;
+    }
+  }
+  @media (max-width: 1100px) {
+    .content {
+      flex-basis: 30%;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .content {
+      flex-basis: 45%;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    #searchBox {
+      display: none;
+    }
+    #button {
+      display: none;
+    }
+    #mic {
+      display: block;
+      margin-left: auto;
+      margin-top: 4px;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    #menus {
+      display: none;
+    }
+    .contents {
+      margin-left: 0px;
+    }
+  }
+  @media (max-width: 640px) {
+    .content {
+      flex-basis: 77%;
+    }
+  }

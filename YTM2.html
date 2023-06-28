@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/indexDark.CSS" id="darkModeStylesheet" disabled />
+    <title>유튜브</title>
+    <style>
+        .side-bar {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background: #f2f2f2;
+            transition: left 0.3s ease;
+        }
+
+        .side-bar.active {
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo left">
+            <i id="menu" class="material-icons">menu</i>
+            <img src="video.png">
+            <button id="darkModeToggle" style="margin-left: 30px; border: radius 5px;;">다크모드</button>
+        </div>
+        <div class="search center">
+            <form action="">
+                <input type="text" placeholder="Search" />
+                <button><i class="material-icons">search</i></button>
+            </form>
+            <i class="material-icons mic">mic</i>
+        </div>
+        <div class="icons right">
+            <i class="material-icons">videocam</i>
+            <i class="material-icons">apps</i>
+            <i class="material-icons">notifications</i>
+            <i class="material-icons display-this">account_circle</i>
+        </div>
+    </header>
+    <main>
+        <div class="side-bar">
+            <button id="closeBtn"><img src="list.png" style="width: 40px; height: 40px;"></button>
+            <div class="nav">
+                <a class="nav-link active">
+                    <i class="material-icons">home</i>
+                    <span>홈</span>
+                </a>
+                <a class="nav-link">
+                    <i class="material-icons">local_fire_department</i>
+                    <span>트랜드</span>
+                </a>
+                <a class="nav-link">
+                    <i class="material-icons">subscriptions</i>
+                    <span>구독</span>
+                </a>
+            </div>
+            <hr>
+            <a class="nav-link">
+                <i class="material-icons">library_add_check</i>
+                <span>저장</span>
+            </a>
+            <a class="nav-link">
+                <i class="material-icons">history</i>
+                <span>기록</span>
+            </a>
+            <a class="nav-link">
+                <i class="material-icons">play_arrow</i>
+                <span>내 영상</span>
+            </a>
+            <a class="nav-link">
+                <i class="material-icons">watch_later</i>
+                <span>나중에 보기</span>
+            </a>
+            <a class="nav-link">
+                <i class="material-icons">thumb_up</i>
+                <span>동영상</span>
+            </a>
+           
+        </div>
+        <div class="musicVideos">
+            <section class="info">
+				<!--meta data-->
+				<div class="metadata">
+					<ul class="hashtag">
+						<li>#Dream</li>
+						<li>#Ong</li>
+						<li>#Supportingme</li>
+					</ul>
+					<div class="titleAndButton">
+						<span class="title clamp">
+							Clone Coding: Youtube Mobile Website | 클론 코딩: 유튜브 모바일
+							웹사이트 따라만들기 | 프론트엔드 개발자 입문편: HTML. CSS,
+							JavaScript 실전입문 | 드림코딩 by.엘리 커리큘럼 따라가며 공부하기
+							| 재밌다!
+						</span>
+						<button class="moreBtn">
+							<i class="fas fa-caret-down"></i>
+						</button>
+					</div>
+
+					<div class="views">1M views 1 days ago</div>
+				</div>
+
+				<!--actions-->
+				<ul class="actions">
+					<li>
+						<button>
+							<i class="fas fa-thumbs-up active"></i><span>1K</span>
+						</button>
+					</li>
+					<li>
+						<button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+					</li>
+					<li>
+						<button><i class="fas fa-share"></i><span>Share</span></button>
+					</li>
+					<li>
+						<button><i class="fas fa-plus"></i><span>Save</span></button>
+					</li>
+					<li>
+						<button>
+							<i class="fab fa-font-awesome-flag"></i><span>Report</span>
+						</button>
+					</li>
+				</ul>
+
+				<!--Channel Discriptions-->
+				<div class="channel">
+					<div class="metadata">
+						<img src="image/profile.jpg" alt="" />
+						<div class="info">
+							<span class="name">옹월드</span>
+							<span class="subscribers">1M subscribers</span>
+						</div>
+					</div>
+					<button class="subscribe">subscribe</button>
+				</div>
+			</section>
+
+			<!--upNext-->
+			<section class="upNext">
+				<span class="title">Up Next</span>
+				<ul>
+					<li class="item">
+						<div class="img"><img src="image/thum1.jpg" alt="" /></div>
+						<div class="info">
+							<span class="title"
+								>포브스선정 세계에서 가장 귀여운 고냥이 1위</span
+							>
+							<span class="name">Best Cat Ever</span>
+							<span class="views">1.7K views</span>
+						</div>
+						<button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+					</li>
+					<li class="item">
+						<div class="img"><img src="image/thum2.jpg" alt="" /></div>
+						<div class="info">
+							<span class="title">고양이 옹선생</span>
+							<span class="name">Best Cat Ever</span>
+							<span class="views">7K views</span>
+						</div>
+						<button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+					</li>
+					<li class="item">
+						<div class="img"><img src="image/thum3.jpg" alt="" /></div>
+						<div class="info">
+							<span class="title">코딩하는 고양이</span>
+							<span class="name">Best Cat Ever</span>
+							<span class="views">2M views</span>
+						</div>
+						<button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+					</li>
+				</ul>
+			</section>
+        </div>
+    </main>
+    <script>
+        const menuIcon = document.getElementById("menu");
+        const sideBar = document.querySelector(".side-bar");
+        const closeBtn = document.getElementById("closeBtn");
+
+        menuIcon.addEventListener("click", function () {
+            sideBar.classList.toggle("active");
+        });
+
+        closeBtn.addEventListener("click", function () {
+            sideBar.classList.remove("active");
+        });
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        const darkModeStylesheet = document.getElementById("darkModeStylesheet");
+
+        darkModeToggle.addEventListener("click", function () {
+            darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
+        });
+    </script>
+</body>
+</html>

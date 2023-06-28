@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        var menus =document.getElementById("menus");
+        var menu = document.getElementsByClassName("menu");
+        var menu_font = document.getElementsByClassName("menu_font");
+        var menu2 = document.getElementsByClassName("menu2");
+        var border = document.getElementsByClassName("border");
+        var menu_ytm = document.getElementsByClassName("menu_ytm");
+        var contents = document.getElementsByClassName("contents");
+        function menuOpen() {
+            menus.style.width = "240px";
+            menus.style.overflowY = "scroll";
+            menus.style.removeProperty("position");
+
+            for(var i=0; i<menu.length; i++) {
+                menu[i].style.display = "flex";
+                menu[i].style.width="200px";
+                menu[i].style.height="30px";
+            }
+            for(var i=0; i<menu_font.length; i++) {
+                menu_font[i].style.fontSize="14px";
+                menu_font[i].style.whiteSpace="nowrap";
+                menu_font[i].style.removeProperty("display");
+                menu_font[i].style.removeProperty("width");
+                menu_font[i].style.removeProperty("textAlign");
+                menu_font[i].style.removeProperty("marginLeft");
+            }
+            
+            for(var i=0; i<menu2.length; i++) {
+                menu2[i].style.removeProperty("display");
+            }
+            
+            for(var i=0; i<border.length; i++) {
+                border[i].style.removeProperty("display");
+                border[i].style.removeProperty("border");
+            }
+            
+            for(var i=0; i<menu_ytm.length;i++) {
+                menu_ytm[i].style.removeProperty("marginLeft");
+            }
+            for(var i=0; i<contents.length;i++) {
+                contents[i].style.marginLeft = "0px"
+            }
+
+        }
+        function menuClose() {
+            menus.style.width = "70px";
+            menus.style.overflowY = "hidden";
+            menus.style.overflowX = "hidden";
+            menus.style.position = "fixed";
+
+            for(var i=0; i<menu.length; i++) {
+                menu[i].style.display = "block";
+                menu[i].style.width="50px";
+                menu[i].style.height="55px";
+            }
+            for(var i=0; i<menu_font.length; i++) {
+                menu_font[i].style.fontSize="6px";
+                menu_font[i].style.whiteSpace="nowrap";
+                menu_font[i].style.display = "block";
+                menu_font[i].style.width = "40px";
+                menu_font[i].style.textAlign = "center";
+                menu_font[i].style.marginLeft = "-7px";
+            }
+            for(var i=0; i<menu2.length; i++) {
+                menu2[i].style.display = "none";
+            }
+            for(var i=0; i<border.length; i++) {
+                border[i].style.display = "none";
+                border[i].style.border = "none";
+            }
+            for(var i=0; i<menu_ytm.length;i++) {
+                menu_ytm[i].style.marginLeft="-14px";
+            }
+            for(var i=0; i<contents.length;i++) {
+                contents[i].style.marginLeft = "60px";
+            }
+            
+        }
+
+        function menuFunction() {
+            if(menus.style.width == "240px") {
+                menuClose();
+            } else {
+                menuOpen();
+            }
+        }
+    </script>
+</head>
+<body>
+    <body>
+        <div id="top_bar">
+            <div id="top_01" >
+                <img src="PNG/icon01-menu.png" id="menuIcon" onclick="menuFunction()">
+                <img src="PNG/icon02-youtube.png" id="youtube">
+            </div>
+            
+            <div id="top_02">
+                <input type="text" value="검색" id="searchBox">
+                <img src="PNG/icon19-button.png" id="button">
+                <img src="PNG/icon03-mic.png" id="mic">
+            </div>
+    
+            <div id="top_03">
+                <img src="PNG/icon04-video.png" class="icons">
+                <img src="PNG/icon05-app.png" class="icons">
+                <img src="PNG/icon06-notice.png" class="icons">
+                <img src="PNG/icon07-profile.png" id="profile">
+            </div>
+    
+        </div>
+    
+        <div id="main">
+            <div id="menus">
+                <div class="menu">
+                    <div><img src="PNG/icon08-home.png" class="menu_icon"></div>
+                    <div class="menu_font">홈</div>
+                </div>
+                <div class="menu">
+                    <div><img src="PNG/icon09-search.png" class="menu_icon"></div>
+                    <div class="menu_font">탐색</div>
+                </div>
+                <div class="menu">
+                    <div><img src="PNG/icon10-subcribe.png" class="menu_icon"></div>
+                    <div class="menu_font">구독</div>
+                </div>
+                <div class="menu">
+                    <div><img src="PNG/icon11-original.png" class="menu_icon"></div>
+                    <div class="menu_font">Originals</div>
+                </div>
+                <div class="menu">
+                    <img src="PNG/icon12-music.png" class="menu_icon">
+                    <span class="menu_font menu_ytm">Youtube Music</span> 
+                </div>
+    
+                <div class="border"></div>
+    
+                <div class="menu">
+                    <img src="PNG/icon13-보관함.png" class="menu_icon">
+                    <span class="menu_font">보관함</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon14-시청기록.png" class="menu_icon">
+                    <span class="menu_font">시청기록</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon15-내 동영상.png" class="menu_icon">
+                    <span class="menu_font">내 동영상</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon18-나중에 볼 동영상.png" class="menu_icon">
+                    <span class="menu_font">나중에 볼 동영상</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon16-좋아요.png" class="menu_icon">
+                    <span class="menu_font">좋아요 표시한 동영상</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon17-더보기.png" class="menu_icon">
+                    <span class="menu_font">더보기</span>
+                </div>
+    
+                <div class="border"></div>
+    
+                <div class="menu menu2 menu_title">
+                    구독
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/smallprofile.png" class="menu_icon menu_profile">
+                    <span class="channel_font">딩고 뮤직 / dingo music</span>
+                </div>
+    
+                <div class="border"></div>
+    
+                <div class="menu menu2 menu_title">
+                    Youtube 더보기
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon20-movie.png" class="menu_icon">
+                    <span class="menu_font">영화</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon21-game.png" class="menu_icon">
+                    <span class="menu_font">게임</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon22-now.png" class="menu_icon">
+                    <span class="menu_font">실시간</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon23-edu.png" class="menu_icon">
+                    <span class="menu_font">학습</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon24-sport.png" class="menu_icon">
+                    <span class="menu_font">스포츠</span>
+                </div>
+    
+                <div class="border"></div>
+    
+                <div class="menu menu2">
+                    <img src="PNG/icon25-setting.png" class="menu_icon">
+                    <span class="menu_font">설정</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon26-flag.png" class="menu_icon">
+                    <span class="menu_font">신고 기록</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon27-complain.png" class="menu_icon">
+                    <span class="menu_font">고객센터</span>
+                </div>
+                <div class="menu menu2">
+                    <img src="PNG/icon28-opinion.png" class="menu_icon">
+                    <span class="menu_font">의견 보내기</span>
+                </div>
+    
+                <div class="border"></div>
+    
+                <div class = "menu_bottom">
+                    <div class="menu2">
+                        <span class="menu_font2">정보</span>
+                        <span class="menu_font2">보도자료</span>
+                        <span class="menu_font2">저작권</span>
+                    </div>
+                    <div class="menu2">
+                        <span class="menu_font2">문의하기</span>
+                        <span class="menu_font2">크리에이터</span>
+                        <span class="menu_font2">광고</span>
+                    </div>
+                    <div class="menu2">
+                        <span class="menu_font2">개발자</span>
+                    </div>
+                </div>
+    
+                <div class = "menu_bottom"> 
+                    <div class="menu2">
+                        <span class="menu_font2">약관</span>
+                        <span class="menu_font2">개인정보처리방침</span>
+                    </div>
+                    <div class="menu2">
+                        <span class="menu_font2">정책 및 안전</span>
+                    </div>
+                    <div class="menu2">
+                        <span class="menu_font2">youtube 작동의 원리</span>
+                    </div>
+                    <div  class="menu2">
+                        <span class="menu_font2">새로운 기능 테스트하기</span>
+                    </div>
+                </div>
+                <div class="menu_bottom2 menu2">
+                    © 2021 Google LLC<br>
+                    CEO: 선다 피차이<br>
+                    주소: 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.<br>
+                    전화: 080-822-1450(무료)<br>
+                </div>  
+                
+            </div>
+            
+            <div class="contents">
+                <div class="content">
+                    <img src="PNG/thumbnail.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][Special] 아이유(IU)의 킬링보이스를 라이브로! / 하루 끝, 너의 의미, 스물셋, 밤편지, 팔레트, 가을 아침, 삐삐, Blueming, 에잇, Coin, 라일락</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail2.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][special] 마마무(MAMAMOO)의 킬링보이스를 라이브로! /Mr.애매모호,너나 해,데칼코마니,별빛밤,I miss you,HIP,고고베베,딩가딩가,AYA | 딩고뮤직</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail3.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][Killing Voice] 성시경(Sungsikyung)의 킬링보이스 - 너의 모든 순간, 좋을텐데, 넌 감동이었어, 희재, 두사람, 미소천사, 거리에서, 태양계ㅣ딩고뮤직</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail4.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][Killing Voice] 빅마마(Bigmama)의 킬링보이스- break away,배반, 여자, 체념,거부,Never mind, 소리,이별, 그 후, 하루만 더ㅣ딩고뮤직</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail5.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][Killing Voice] 에일리(AILEE)의 킬링보이스 - Heaven, 보여줄게, 저녁하늘, U&I, Higher, 노래가 늘었어, 손대지마, 첫눈처럼 너에게 가겠다</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail6.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][Special] 펀치(PUNCH)의 킬링보이스를 라이브로!/밤이 되니까,가끔 이러다,헤어지는 중,오늘밤도,Stay with me,Everytime,안녕 내 전부였던 너</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail7.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][special] 10CM의 킬링보이스를 라이브로! /폰서트, 매트리스, pet, 봄이좋냐??, TV를껐네, Perfect, 입김, 스토커, 사랑은은하수다방에서, 아메리카노</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail8.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][special] 폴킴(Paul Kim)의 킬링보이스를 라이브로!/커피한잔할래요,우리만남이,모든날모든순간,안녕,있잖아,사랑은 타이밍,편지,초록빛,너를 만나,사랑하는 당신께</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail9.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">4K][Killing Voice] 거미(Gummy)의 킬링보이스 - 친구라도 될 걸 그랬어, 날 그만 잊어요, 기억상실, 눈꽃, 그대 돌아오면, 어른아이, 미안해요ㅣ딩고뮤직</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail10.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][Killing Voice] 하이라이트(HIGHLIGHT)의 킬링보이스 - 불어온다, 얼굴 찌푸리지말아요, 아름다운 밤이야, 비가오는 날엔, Fiction, 숨ㅣ딩고뮤직</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail11.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][special] 비(RAIN)의 킬링보이스를 라이브로!/나쁜 남자,태양을 피하는 방법,안녕이란 말 대신,It's Raining,Rainism,나로 바꾸자</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <img src="PNG/thumbnail12.png" class="thumbnail">
+                    <div class="contentDetail">
+                        <img src="PNG/smallprofile.png" class="smallProfile">
+                        <div class="contentProfile2">
+                            <div class="title">[4K][Killing Voice]노을(Noel)의 킬링보이스–늦은 밤 너의 집 앞 골목길에서, 그리워 그리워, 청혼,전부 너였다,붙잡고도,인연,목소리,하지 못한 말,오늘도 그대만</div>
+                            <div class="userID">딩고 뮤직 / dingo music</div>
+                            <div class="videoDetail">
+                                <span class="userID">조회수 100만회 </span>
+                                <span class="userID"> • </span>
+                                <span class="userID">1시간 전</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+        </div>
+</body>
+</html>
